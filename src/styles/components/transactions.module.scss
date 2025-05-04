@@ -1,0 +1,67 @@
+// Transactions Component
+
+@import "../utils/variables";
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .labelBox {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+
+    .transactionIcon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      border-radius: 50%;
+      background-color: $text-light;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .titleBox {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-sm;
+      align-items: flex-start;
+
+      h2 {
+        font-weight: $font-weight-medium;
+        margin-bottom: 2px;
+        font-size: $font-size-lg;
+      }
+
+      span {
+        font-size: $font-size-xs;
+        color: $text-light;
+      }
+    }
+  }
+
+  .amountBox {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+
+    // amount
+    p {
+      font-weight: $font-weight-semibold;
+      margin-bottom: 2px;
+      font-size: $font-size-lg;
+    }
+
+    // status
+    span {
+      font-size: $font-size-xs;
+      color: $success-color;
+    }
+  }
+}

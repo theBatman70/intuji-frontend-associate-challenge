@@ -1,0 +1,80 @@
+// Base Styles
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: $font-family;
+  font-size: $font-size-md;
+  color: $text-dark;
+  background-color: $bg-light;
+  line-height: 1.5;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-weight: $font-weight-semibold;
+//   margin-bottom: $spacing-md;
+// }
+
+h1 {
+  font-size: $font-size-xxl;
+}
+
+h2 {
+  font-size: $font-size-xl;
+}
+
+h3 {
+  font-size: $font-size-lg;
+}
+
+// p {
+//   margin-bottom: $spacing-md;
+// }
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+// Override default outline
+:focus {
+  outline: 2px solid rgba($primary-color, 0.5);
+  outline-offset: 2px;
+}

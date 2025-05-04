@@ -1,0 +1,112 @@
+// Sidebar Component
+
+@import "../utils/variables";
+
+.closeIcon {
+  position: absolute;
+  top: -2px;
+  right: 0px;
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.sidebar {
+  max-width: 280px;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  min-height: 100vh;
+  background-color: $bg-white;
+  border-right: 1px solid $border-color;
+  padding: $spacing-lg 0;
+  transition: all 0.3s ease;
+}
+
+.sidebarHeader {
+  padding: 0 $spacing-lg $spacing-lg;
+  margin-bottom: $spacing-lg;
+  display: flex;
+  align-items: center;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: $spacing-sm;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .logoText {
+      font-size: $font-size-lg;
+      font-weight: $font-weight-bold;
+      color: $text-dark;
+    }
+  }
+}
+
+.sidebarMenu {
+  list-style: none;
+
+  li {
+    margin-bottom: $spacing-xs;
+  }
+
+  .menuItem {
+    display: flex;
+    align-items: center;
+    padding: $spacing-md $spacing-lg;
+    color: $text-medium;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+
+    a {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &:hover {
+      background-color: rgba($primary-color, 0.05);
+      color: $primary-color;
+    }
+
+    &.active {
+      color: $primary-color;
+      background-color: rgba($primary-color, 0.08);
+      border-left-color: $primary-color;
+      font-weight: $font-weight-medium;
+    }
+
+    img {
+      margin-right: $spacing-md;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.sidebarDivider {
+  height: 1px;
+  background-color: $border-color;
+  margin: $spacing-lg 0;
+}
+
+.sidebarFooter {
+  // padding: 0 $spacing-lg;
+  margin-top: min(5vw, 40px); // won't go above 40px;
+}
