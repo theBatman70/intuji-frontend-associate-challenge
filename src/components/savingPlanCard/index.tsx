@@ -4,12 +4,16 @@ import styles from "../../styles/components/savingPlanCard.module.scss";
 const SavingPlanCard = ({ plan }: { plan: SavingPlan }) => {
   // Determine progress color based on percentage
   let progressColor = "";
+  let progressBgColor = "";
   if (plan.percentage >= 70) {
-    progressColor = "yellow"; // e.g., green
+    progressColor = "yellow";
+    progressBgColor = "bgYellow";
   } else if (plan.percentage >= 40) {
-    progressColor = "green"; // e.g., yellow/orange
+    progressColor = "green";
+    progressBgColor = "bgGreen";
   } else {
     progressColor = "purple";
+    progressBgColor = "bgPurple";
   }
 
   return (
@@ -29,7 +33,7 @@ const SavingPlanCard = ({ plan }: { plan: SavingPlan }) => {
 
       <div className={styles.progressBar}>
         <div
-          className={` ${styles.progressValue} ${progressColor}`}
+          className={` ${styles.progressValue} ${progressBgColor}`}
           style={{ width: `${plan.percentage}%` }}
         />
       </div>

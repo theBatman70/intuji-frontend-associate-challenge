@@ -1,3 +1,5 @@
+@import "./utils/variables";
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +13,7 @@
   }
 }
 body {
-  background-color: #f7f7fb;
+  background-color: $bg-light;
   font-size: 16px;
   line-height: 100%;
   color: #667085;
@@ -62,7 +64,7 @@ main {
 }
 
 section {
-  background-color: #ffffff;
+  background-color: $bg-white;
   border-radius: 14px;
   margin-bottom: 32px;
   padding: 16px;
