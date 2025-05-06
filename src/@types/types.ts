@@ -1,10 +1,11 @@
 // Define types
-type CardData = {
+type OverviewCardType = {
+  id: number;
   title: string;
-  amount: string;
-  percentage: string;
-  isPositive: boolean;
+  amount: number;
+  percentage: number;
   comparison: string;
+  iconUrl: string;
 };
 
 type SavingPlan = {
@@ -26,4 +27,4 @@ type Transaction = {
   icon: string;
 };
 
-export type { Transaction, SavingPlan, CardData };
+export type { Transaction, SavingPlan, OverviewCardType };

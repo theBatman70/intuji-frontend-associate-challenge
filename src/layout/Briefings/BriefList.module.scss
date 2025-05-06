@@ -1,0 +1,33 @@
+@import "../../styles/utils/variables";
+
+.briefBox {
+  display: flex;
+  flex-direction: column;
+
+  .briefHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $light-gray;
+    margin-bottom: $spacing-lg;
+    padding-bottom: $spacing-lg;
+  }
+
+  .briefingList {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+}
+@media (min-width: 76.8rem) {
+  .briefBox {
+    display: flex;
+  }
+}
+// @media (min-width: 120rem) {
+//   .briefBox {
+//     max-width: 35rem;
+//     width: 100%;
+//     display: block;
+//   }
+// }

@@ -1,0 +1,23 @@
+@import "../../styles/utils/variables.scss";
+
+.dashboardContainer {
+  display: flex;
+  gap: $spacing-lg;
+  width: 100%;
+
+  section {
+    background-color: $bg-white;
+    border-radius: $border-radius-md;
+    margin-bottom: $spacing-xl;
+    padding: $spacing-md;
+    width: 100%;
+
+    header {
+      margin-bottom: $spacing-lg;
+    }
+  }
+
+  .midBox {
+    flex: 1;
+  }
+}

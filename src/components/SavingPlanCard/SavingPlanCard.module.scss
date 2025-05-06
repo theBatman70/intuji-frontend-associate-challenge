@@ -1,7 +1,7 @@
 @import "../../styles/utils/variables";
 
 .item {
-  padding: 0 8px;
+  padding: 0 0.8rem;
   display: flex;
   flex-direction: column;
 
@@ -11,6 +11,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    gap: 0.8rem;
 
     span {
       font-size: $font-size-xs;
@@ -19,14 +20,12 @@
   }
 
   .title {
-    margin-bottom: $spacing-sm;
+    margin-bottom: 1.4rem;
+
     h4 {
       font-size: $font-size-md;
       font-weight: $font-weight-medium;
-    }
-    span {
-      font-size: $font-size-xs;
-      color: $text-light;
+      line-height: $font-size-lg;
     }
   }
 
@@ -36,7 +35,7 @@
       font-weight: $font-weight-semibold;
       line-height: 100%;
     }
-    margin-bottom: 12px;
+    margin-bottom: 1.2rem;
   }
 
   .progressBar {
