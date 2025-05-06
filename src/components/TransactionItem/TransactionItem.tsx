@@ -1,11 +1,7 @@
 import { Transaction } from "../../@types/types";
-import styles from "../../styles/components/transactions.module.scss";
+import styles from "./TransactionItem.module.scss";
 
-export default function TransactionItem({
-  transaction,
-}: {
-  transaction: Transaction;
-}) {
+const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
   return (
     <article className={styles.item}>
       <div className={styles.labelBox}>
@@ -23,4 +19,6 @@ export default function TransactionItem({
       </div>
     </article>
   );
-}
+};
+
+export default TransactionItem;

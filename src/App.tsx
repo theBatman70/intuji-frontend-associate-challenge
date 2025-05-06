@@ -1,5 +1,5 @@
-import "./App.css";
-import Sidebar from "./components/Sidebar";
+import Header from "./layout/Header/Header";
+import Sidebar from "./features/Sidebar/Sidebar";
 import { menuItems } from "./data/sidebarItems";
 import Dashboard from "./pages/Dashboard";
 
@@ -10,14 +10,7 @@ function App() {
         <Sidebar menuItems={menuItems} />
       </aside>
       <main className="main-layout">
-        <header>
-          <div className="header-container">
-            <h1>Dashboard</h1>
-            <div className="profile">
-              <img src="/assets/icons/logo.svg" alt="profile" />
-            </div>
-          </div>
-        </header>
+        <Header />
         <Dashboard />
       </main>
     </div>

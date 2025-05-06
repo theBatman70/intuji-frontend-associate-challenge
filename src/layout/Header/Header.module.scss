@@ -1,0 +1,7 @@
+@import "../../styles/utils/variables";
+
+.header {
+  display: flex;
+  gap: $spacing-lg;
+  justify-content: space-between;
+}

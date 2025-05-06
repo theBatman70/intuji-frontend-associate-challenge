@@ -1,4 +1,4 @@
-import styles from "../styles/components/sidebar.module.scss";
+import styles from "./Sidebar.module.scss";
 
 interface MenuItem {
   label: string;

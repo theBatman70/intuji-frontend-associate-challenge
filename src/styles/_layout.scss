@@ -7,18 +7,18 @@
   .main-layout {
     display: flex;
     flex-direction: column;
-    padding: $spacing-lg;
+    padding: $spacing-xl;
     background-color: $bg-light;
     margin-left: 280px;
 
-    header {
-      width: 100%;
-      display: flex;
+    .dashboard-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
     }
 
-    @media (max-width: $breakpoint-md) {
-      padding: $spacing-md;
-    }
+    // @media (max-width: $breakpoint-md) {
+    //   padding: $spacing-md;
+    // }
   }
 }
 
@@ -31,7 +31,7 @@
 
   a {
     text-decoration: none;
-    color: #4745a4;
+    color: $primary-color;
 
     &:hover {
       text-decoration: underline;

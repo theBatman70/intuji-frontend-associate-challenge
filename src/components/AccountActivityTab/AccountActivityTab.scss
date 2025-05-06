@@ -1,0 +1,47 @@
+.accountActivityTab {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-sm;
+  background-color: $bg-white;
+  border-radius: 10rem;
+  height: 6.4rem;
+  width: min-content;
+
+  .btn {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    padding: 1.2rem $spacing-lg;
+    background-color: $bg-white;
+    border: #dedede solid 1px;
+    border-radius: 10rem;
+    color: $text-dark;
+
+    &:hover {
+      background-color: $bg-light;
+      color: $text-dark;
+    }
+  }
+  .userPhotoContainer {
+    border-radius: 50%;
+    background-color: lightgray;
+    padding: $spacing-sm;
+  }
+
+  .userBtn {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+
+    .userName {
+      font-size: $font-size-md;
+      text-wrap: nowrap;
+    }
+
+    .dropDown {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+}

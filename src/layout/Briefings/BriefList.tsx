@@ -1,12 +1,8 @@
-export default function BriefList({
-  title,
-  viewMoreLink,
-  children,
-}: {
+const BriefList: React.FC<{
   title: string;
   viewMoreLink: string;
   children: React.ReactNode;
-}) {
+}> = ({ title, viewMoreLink, children }) => {
   return (
     <section>
       <header>
@@ -16,4 +12,6 @@ export default function BriefList({
       <div className="briefingList">{children}</div>
     </section>
   );
-}
+};
+
+export default BriefList;

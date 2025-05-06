@@ -1,5 +1,5 @@
 import { SavingPlan } from "../../@types/types";
-import styles from "../../styles/components/savingPlanCard.module.scss";
+import styles from "./SavingPlanCard.module.scss";
 
 const SavingPlanCard = ({ plan }: { plan: SavingPlan }) => {
   // Determine progress color based on percentage

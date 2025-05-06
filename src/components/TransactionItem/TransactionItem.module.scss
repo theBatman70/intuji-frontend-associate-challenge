@@ -1,6 +1,4 @@
-// Transactions Component
-
-@import "../utils/variables";
+@import "../../styles/utils/variables";
 
 .item {
   display: flex;
@@ -42,6 +40,7 @@
       span {
         font-size: $font-size-xs;
         color: $text-light;
+        font-weight: $font-weight-medium;
       }
     }
   }

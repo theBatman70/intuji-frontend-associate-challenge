@@ -1,22 +1,26 @@
+@use "sass:color";
+
 // Variables
 
 // Colors
-$primary-color: #4e64fa;
-$secondary-color: #ffa600;
-$success-color: #5cd68a;
+$primary-color: #4745a4;
+$secondary-color: #f9ba33;
+$success-color: #3bbb6e;
 $danger-color: #ff5d5d;
 $light-blue: #f0f5ff;
 $dark-blue: #1a2b88;
+$light-gray: #dedede;
+$medium-gray: #7c7c7c;
 
 // Text Colors
-$text-dark: #333;
-$text-medium: #767676;
-$text-light: #9e9e9e;
+$text-dark: #0d163a;
+$text-medium: color.adjust($text-dark, $alpha: -0.4); // 40% transparent
+$text-light: color.adjust($text-dark, $alpha: -0.5); // 50% transparent
 $text-white: #ffffff;
 
 // Background Colors
 $bg-white: #ffffff;
-$bg-light: #f8f9fd;
+$bg-light: #f7f7fb;
 $bg-primary: $primary-color;
 
 // Gradients
@@ -32,33 +36,32 @@ $gradient-secondary: linear-gradient(
 );
 
 // Border
-$border-radius-sm: 6px;
-$border-radius-md: 12px;
-$border-radius-lg: 24px;
+$border-radius-sm: 0.6rem; // 6px
+$border-radius-md: 1.2rem; // 12px
+$border-radius-lg: 2.4rem; // 24px
 $border-color: #eaedf4;
 
 // Spacing
-$spacing-xs: 4px;
-$spacing-sm: 8px;
-$spacing-md: 16px;
-$spacing-lg: 24px;
-$spacing-xl: 32px;
-$spacing-xxl: 48px;
+$spacing-xs: 0.4rem; // 4px
+$spacing-sm: 0.8rem; // 8px
+$spacing-md: 1.6rem; // 16px
+$spacing-lg: 2.4rem; // 24px
+$spacing-xl: 3.2rem; // 32px
+$spacing-xxl: 4.8rem; // 48px
 
 // Shadows
-$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
-$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-$shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+$shadow-sm: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.05);
+$shadow-md: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 0.8rem 2.4rem rgba(0, 0, 0, 0.12);
 
 // Font
-$font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  Oxygen, Ubuntu, Cantarell, sans-serif;
-$font-size-xs: 12px;
-$font-size-sm: 14px;
-$font-size-md: 16px;
-$font-size-lg: 18px;
-$font-size-xl: 24px;
-$font-size-xxl: 32px;
+$font-family: "Plus Jakarta Sans", sans-serif;
+$font-size-xs: 1.2rem; // 12px
+$font-size-sm: 1.4rem; // 14px
+$font-size-md: 1.6rem; // 16px
+$font-size-lg: 1.8rem; // 18px
+$font-size-xl: 2.4rem; // 24px
+$font-size-xxl: 3.2rem; // 32px
 
 // Font Weight
 $font-weight-regular: 400;
@@ -67,7 +70,7 @@ $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
 // Breakpoints
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
+$breakpoint-sm: 57.6rem; // 576px
+$breakpoint-md: 76.8rem; // 768px
+$breakpoint-lg: 99.2rem; // 992px
+$breakpoint-xl: 120rem; // 1200px

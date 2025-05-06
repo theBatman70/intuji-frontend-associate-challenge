@@ -22,6 +22,8 @@
   border-right: 1px solid $border-color;
   padding: $spacing-lg 0;
   transition: all 0.3s ease;
+  font-size: $font-size-md;
+  font-weight: $font-weight-regular;
 }
 
 .sidebarHeader {
@@ -29,22 +31,18 @@
   margin-bottom: $spacing-lg;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   .logo {
     display: flex;
     align-items: center;
     justify-items: center;
     gap: $spacing-sm;
+    background-color: lightgray;
 
     img {
       width: 32px;
       height: 32px;
-    }
-
-    .logoText {
-      font-size: $font-size-lg;
-      font-weight: $font-weight-bold;
-      color: $text-dark;
     }
   }
 }
@@ -75,10 +73,11 @@
     &:hover {
       background-color: rgba($primary-color, 0.05);
       color: $primary-color;
+      font-weight: $font-weight-medium;
     }
 
     &.active {
-      color: $primary-color;
+      color: $text-dark;
       background-color: rgba($primary-color, 0.08);
       border-left-color: $primary-color;
       font-weight: $font-weight-medium;

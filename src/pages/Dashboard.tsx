@@ -2,31 +2,16 @@ import { savingPlans } from "../data/savingPlans";
 // import AnalyticsChart from "../graph";
 // import { labelColors } from "../data/chart";
 import { transactions } from "../data/transactions";
-import Briefings from "../layout/briefings";
-import BriefList from "../components/briefList";
-import SavingPlanCard from "../components/savingPlanCard";
-import TransactionItem from "../components/transactionItem";
+import Briefings from "../layout/Briefings/Briefings";
+import BriefList from "../layout/Briefings/BriefList";
+import SavingPlanCard from "../components/SavingPlanCard/SavingPlanCard";
+import TransactionItem from "../components/TransactionItem/TransactionItem";
 
 const Dashboard = () => {
   return (
     <>
       <div className="dashboard-container">
-        <div>
-          {/* <section className={styles.overviewBox}>
-            <h3>Overview</h3>
-            <div className="row custom-gap">
-              {overviewBoxData.map((card) => (
-                <div key={card.title} className={`col-md-6 ${styles.cardBox}`}>
-                  <Card {...card} />
-                </div>
-              ))}
-            </div>
-          </section> */}
-
-          {/* <section>
-            <AnalyticsChart colors={labelColors} />
-          </section> */}
-        </div>
+        <div></div>
         <Briefings>
           <BriefList title="Saving Plan" viewMoreLink="#">
             {savingPlans.map((plan) => (
