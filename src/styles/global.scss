@@ -37,10 +37,12 @@ p {
 
 h2 {
   font-size: 2rem;
+  font-weight: $font-weight-bold;
 }
 
 h3 {
   font-size: 1.8rem;
+  font-weight: $font-weight-semibold;
 }
 
 span {
