@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+import { sidebarNavItems } from "../../data/sidebarItems";
 import styles from "./Sidebar.module.scss";
 
 interface MenuItem {
@@ -14,7 +16,7 @@ interface SidebarProps {
   onClose?: () => void;
 }
 
-const Sidebar = ({ menuItems, onClose }: SidebarProps) => {
+const Sidebar = ({ onClose }: SidebarProps) => {
   return (
     <div className={styles.sidebar}>
       <div className={`${styles.sidebarHeader}`}>
@@ -25,45 +27,58 @@ const Sidebar = ({ menuItems, onClose }: SidebarProps) => {
           <img src="/assets/icons/close.svg" alt="close" />
         </div>
       </div>
-      <div className={styles.sidebarMenu}>
-        <ul>
-          {menuItems.itemsTop?.map((item, index) => (
-            <li key={index} className={styles.menuItem}>
-              <a href={item.link}>
-                <img src={item.icon} alt={item.label} />
-                <span>{item.label}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
+      <nav className={styles.nav}>
+        {sidebarNavItems.itemsTop?.map((item, index) => (
+          <NavLink
+            key={index}
+            to={item.link}
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.navButton} ${styles.active}`
+                : styles.navButton
+            }
+          >
+            <img src={item.icon} alt={item.label} />
+            <span className={styles.buttonName}>{item.label}</span>
+          </NavLink>
+        ))}
+
         <div className={styles.sidebarDivider}></div>
-        <div className={styles.lastMenu}>
+        <div className={styles.bottomMenu}>
           <div>
-            <ul>
-              {menuItems.itemsMid?.map((item, index) => (
-                <li key={index} className={styles.menuItem}>
-                  <a href={item.link}>
-                    <img src={item.icon} alt={item.label} />
-                    <span>{item.label}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
+            {sidebarNavItems.itemsMid?.map((item, index) => (
+              <NavLink
+                key={index}
+                to={item.link}
+                className={({ isActive }) =>
+                  isActive
+                    ? `${styles.navButton} ${styles.active}`
+                    : styles.navButton
+                }
+              >
+                <img src={item.icon} alt={item.label} />
+                <span className={styles.buttonName}>{item.label}</span>
+              </NavLink>
+            ))}
           </div>
           <div className={styles.sidebarFooter}>
-            <ul>
-              {menuItems.itemsBottom?.map((item, index) => (
-                <li key={index} className={styles.menuItem}>
-                  <a href={item.link}>
-                    <img src={item.icon} alt={item.label} />
-                    <span>{item.label}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
+            {sidebarNavItems.itemsBottom?.map((item, index) => (
+              <NavLink
+                key={index}
+                to={item.link}
+                className={({ isActive }) =>
+                  isActive
+                    ? `${styles.navButton} ${styles.active}`
+                    : styles.navButton
+                }
+              >
+                <img src={item.icon} alt={item.label} />
+                <span className={styles.buttonName}>{item.label}</span>
+              </NavLink>
+            ))}
           </div>
         </div>
-      </div>
+      </nav>
     </div>
   );
 };

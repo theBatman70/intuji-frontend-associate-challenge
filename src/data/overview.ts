@@ -45,7 +45,7 @@ const incomeData: OverviewCardType = {
   amount: 21121.0,
   percentage: 8,
   comparison: "compared with last month",
-  iconUrl: "/assets/icons/direct-down",
+  iconUrl: "/assets/icons/direct-down.svg",
 };
 
 const overviewBoxData = [balanceData, savingData, expenseData, incomeData];

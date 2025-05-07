@@ -1,17 +1,21 @@
-export const menuItems = {
+export const sidebarNavItems = {
   itemsTop: [
-    { label: "Dashboard", icon: "/assets/icons/dashboard.svg", link: "#" },
-    { label: "Schedule", icon: "/assets/icons/calendar.svg", link: "#" },
-    { label: "Message", icon: "/assets/icons/sms.svg", link: "#" },
-    { label: "Analytics", icon: "/assets/icons/chart.svg", link: "#" },
-    { label: "Teams", icon: "/assets/icons/multi-user.svg", link: "#" },
+    { label: "Dashboard", icon: "/assets/icons/dashboard.svg", link: "/" },
+    {
+      label: "Schedule",
+      icon: "/assets/icons/calendar.svg",
+      link: "/schedule",
+    },
+    { label: "Message", icon: "/assets/icons/sms.svg", link: "/message" },
+    { label: "Analytics", icon: "/assets/icons/chart.svg", link: "/analytics" },
+    { label: "Teams", icon: "/assets/icons/multi-user.svg", link: "/teams" },
   ],
   itemsMid: [
-    { label: "Schedule", icon: "/assets/icons/user.svg", link: "#" },
-    { label: "Message", icon: "/assets/icons/setting.svg", link: "#" },
+    { label: "Profile", icon: "/assets/icons/user.svg", link: "/profile" },
+    { label: "Settings", icon: "/assets/icons/setting.svg", link: "/settings" },
   ],
   itemsBottom: [
-    { label: "Schedule", icon: "/assets/icons/info-circle.svg", link: "#" },
-    { label: "Message", icon: "/assets/icons/login.svg", link: "#" },
+    { label: "Help", icon: "/assets/icons/info-circle.svg", link: "/help" },
+    { label: "Logout", icon: "/assets/icons/login.svg", link: "/logout" },
   ],
 };

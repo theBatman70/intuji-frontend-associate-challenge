@@ -38,6 +38,7 @@ p {
 h2 {
   font-size: 2rem;
   font-weight: $font-weight-bold;
+  letter-spacing: -0.1rem;
 }
 
 h3 {
@@ -64,20 +65,7 @@ main {
 .header {
   padding: 16px 16px 32px 16px;
 }
-.custom-gap {
-  --bs-gutter-y: 18px;
-  --bs-gutter-x: 18px;
-}
 
-.space-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.list-margin {
-  margin-bottom: 24px;
-}
 .overlay {
   position: fixed;
   inset: 0;

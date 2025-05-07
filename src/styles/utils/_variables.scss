@@ -14,8 +14,8 @@ $medium-gray: #7c7c7c;
 
 // Text Colors
 $text-dark: #0d163a;
-$text-medium: color.adjust($text-dark, $alpha: -0.4); // 40% transparent
-$text-light: color.adjust($text-dark, $alpha: -0.5); // 50% transparent
+$text-medium: color.adjust($text-dark, $alpha: -0.4); // more transparent
+$text-light: color.adjust($text-dark, $alpha: -0.5); // more transparent
 $text-white: #ffffff;
 
 // Background Colors
@@ -39,7 +39,7 @@ $gradient-secondary: linear-gradient(
 $border-radius-sm: 0.6rem; // 6px
 $border-radius-md: 1.4rem; // 12px
 $border-radius-lg: 2.4rem; // 24px
-$border-color: #eaedf4;
+$border-color: color.adjust($primary-color, $alpha: -0.8); // reduced opacity;
 
 // Spacing
 $spacing-xs: 0.4rem; // 4px
