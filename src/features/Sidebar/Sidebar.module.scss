@@ -52,12 +52,12 @@
 .nav {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  height: 100%;
+  flex-grow: 1;
+
   .navButton {
     display: flex;
     align-items: center;
-    padding: $spacing-md $spacing-lg;
+    padding: $spacing-lg $spacing-xxl;
     color: $text-medium;
     transition: all 0.3s ease;
     border-left: 4px solid transparent;
@@ -127,7 +127,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: auto;
+    flex-grow: 1;
 
     .sidebarFooter {
       margin-top: auto;
