@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid $light-gray;
+    border-bottom: 1px solid #e6e1e19a;
     margin-bottom: $spacing-lg;
     padding-bottom: $spacing-lg;
   }
@@ -16,7 +16,7 @@
   .briefingList {
     display: flex;
     flex-direction: column;
-    gap: $spacing-lg;
+    gap: 1.6rem;
   }
 }
 @media (min-width: 76.8rem) {

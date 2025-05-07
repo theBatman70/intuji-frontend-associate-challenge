@@ -14,42 +14,67 @@
   }
 }
 .card {
-  padding: $spacing-md;
+  padding: 2rem;
   border-radius: 14px;
   border: 1px solid #dededeb2;
-  background-color: #ffffff;
-
-  h2,
-  h4 {
-    color: #0d163a;
-  }
-  &.highlighted {
-    background-color: #4745a4;
-    h2,
-    h4 {
-      color: #ffffff;
-    }
-  }
+  background-color: $bg-white;
 
   .cardHeader {
     display: flex;
-
+    align-items: center;
     gap: 9px;
     border-bottom: 1px solid #e6e6e6;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 2rem;
+    margin-bottom: 2.1rem;
 
-    h4 {
-      margin-bottom: 9px;
+    h3 {
+      margin-bottom: $spacing-sm;
     }
+
     .comparisionWrapper {
       display: flex;
       align-items: center;
       gap: 4px;
-      img {
-        max-height: 14px;
-        max-width: 14px;
+
+      span {
+        color: $text-medium;
+        font-weight: $font-weight-regular;
       }
+      img {
+        max-height: 1.4rem;
+        max-width: 1.4rem;
+      }
+    }
+  }
+
+  .amountBox {
+    display: flex;
+    justify-content: space-between;
+    color: $text-dark;
+    font-size: 2.8rem;
+    line-height: 100%;
+    letter-spacing: -2px;
+  }
+
+  &.highlighted {
+    background-color: #4745a4;
+
+    .cardHeader {
+      border-bottom: 1px solid #ffffff36;
+
+      h3 {
+        color: $text-white;
+      }
+
+      .comparisionWrapper {
+        span {
+          color: #ffffff75;
+        }
+      }
+    }
+
+    .amountBox {
+      color: $text-white;
     }
   }
 }

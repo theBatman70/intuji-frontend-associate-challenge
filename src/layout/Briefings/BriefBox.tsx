@@ -1,6 +1,6 @@
-import styles from "./BriefList.module.scss";
+import styles from "./BriefBox.module.scss";
 
-const BriefList: React.FC<{
+const BriefBox: React.FC<{
   title: string;
   viewMoreLink: string;
   children: React.ReactNode;
@@ -16,4 +16,4 @@ const BriefList: React.FC<{
   );
 };
 
-export default BriefList;
+export default BriefBox;

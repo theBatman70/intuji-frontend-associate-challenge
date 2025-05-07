@@ -17,13 +17,13 @@
 .briefingSection {
   display: flex;
   flex-direction: column;
-  gap: $spacing-xl;
   max-width: 35rem;
   flex: 1;
 
   a {
     text-decoration: none;
     color: $primary-color;
+    font-weight: $font-weight-medium;
 
     &:hover {
       text-decoration: underline;
@@ -34,13 +34,12 @@
 .overviewGallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: $spacing-lg;
+  gap: 1.8rem;
 }
 
 @media (min-width: 76.8rem) {
   .briefingSection {
     display: flex;
-    gap: 28px;
   }
 }
 @media (min-width: 120rem) {

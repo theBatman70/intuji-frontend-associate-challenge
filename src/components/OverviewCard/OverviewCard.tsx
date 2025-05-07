@@ -1,5 +1,6 @@
 import { OverviewCardType } from "../../@types/types";
 import { growthIconUrls } from "../../data/overview";
+import { formatAmountUSD } from "../../utils/formatAmountUSD";
 import styles from "./OverviewCard.module.scss";
 
 const OverviewCard = ({ overviewCard }: { overviewCard: OverviewCardType }) => {
@@ -17,6 +18,8 @@ const OverviewCard = ({ overviewCard }: { overviewCard: OverviewCardType }) => {
       ? (statusIconUrl = growthIconUrls[id - 1])
       : (statusIconUrl = "/assets/icons/downgrade.png");
 
+  const formattedAmount = formatAmountUSD(amount);
+
   return (
     <div
       className={`${styles.card} ${highlightCard ? styles.highlighted : ""}`}
@@ -33,8 +36,8 @@ const OverviewCard = ({ overviewCard }: { overviewCard: OverviewCardType }) => {
           </div>
         </div>
       </div>
-      <div className="d-flex justify-content-between">
-        <strong>{amount}</strong>
+      <div className={styles.amountBox}>
+        <strong>{formattedAmount}</strong>
         <div>
           {highlightCard ? (
             <img src="/assets/icons/arrow-light.svg" alt="arrow-light" />
