@@ -6,7 +6,7 @@ const BriefBox: React.FC<{
   children: React.ReactNode;
 }> = ({ title, viewMoreLink, children }) => {
   return (
-    <section className={styles.briefBox}>
+    <section className={styles.briefBox} id="savingPlan">
       <header className={styles.briefHeader}>
         <h2>{title}</h2>
         <a href={viewMoreLink}>See All</a>

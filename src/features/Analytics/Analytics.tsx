@@ -6,7 +6,7 @@ import ChartLegend from "../../components/AnalyticsChart/ChartLegend";
 const Analytics = () => {
   return (
     <section className={styles.analyticsContainer}>
-      <div className={` ${styles.titleBox}`}>
+      <div className={styles.titleBox}>
         <h3>Analytics</h3>
         <ChartLegend labelColors={labelColors} />
         {/* <Legend /> */}

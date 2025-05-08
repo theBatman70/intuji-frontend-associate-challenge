@@ -6,6 +6,13 @@ img {
   object-fit: cover;
 }
 
+button {
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
 ul,
 ol {
   list-style: none;
@@ -60,13 +67,6 @@ main {
 
 .header {
   padding: 16px 16px 32px 16px;
-}
-
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
 }
 
 @media (min-width: 768px) {

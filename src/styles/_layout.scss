@@ -11,6 +11,17 @@
     background-color: $bg-light;
     margin-left: 280px;
     width: 100%;
+
+    @media (max-width: 1000px) {
+      margin-left: 0;
+    }
+
+    @media (max-width: 425px) {
+      padding: $spacing-md;
+    }
+    @media (max-width: 375px) {
+      padding: $spacing-md $spacing-sm;
+    }
   }
 }
 
@@ -19,6 +30,7 @@
   flex-direction: column;
   max-width: 35rem;
   flex: 1;
+  gap: $spacing-xl;
 
   a {
     text-decoration: none;
@@ -29,23 +41,47 @@
       text-decoration: underline;
     }
   }
+
+  @media (max-width: 1300px) {
+    flex-direction: row;
+    max-width: none;
+  }
+  @media (max-width: 680px) {
+    flex-direction: column;
+  }
 }
 
 .overviewGallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.8rem;
+
+  @media (max-width: 550px) {
+    grid-template-columns: 1fr;
+  }
 }
 
-@media (min-width: 76.8rem) {
-  .briefingSection {
-    display: flex;
-  }
+.savingPlanBox {
+  min-height: 44rem;
 }
-@media (min-width: 120rem) {
-  .briefingSection {
-    max-width: 350px;
-    width: 100%;
-    display: block;
-  }
+
+// For mobiles and tablets
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.mobileSidebar {
+  display: none;
+  position: absolute;
+}
+
+.openMobileSidebar {
+  display: flex !important;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  z-index: 9;
+  // width: 100vw !important;
 }

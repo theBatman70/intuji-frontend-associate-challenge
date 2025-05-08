@@ -13,23 +13,26 @@ interface SidebarProps {
     itemsMid?: MenuItem[];
     itemsBottom?: MenuItem[];
   };
+  isMobileSidebarOpen: boolean;
   onClose?: () => void;
 }
 
-const Sidebar = ({ onClose }: SidebarProps) => {
+const Sidebar = ({ onClose, isMobileSidebarOpen }: SidebarProps) => {
   return (
-    <div className={styles.sidebar}>
+    <div
+      className={`${styles.sidebar} ${
+        isMobileSidebarOpen && "openMobileSidebar"
+      }`}
+    >
       <div className={`${styles.sidebarHeader}`}>
         <div className={styles.logoWrap}>
           <img src="/assets/icons/logo.svg" alt="Logo" />
-        </div>
-        <div className={styles.closeIcon} onClick={onClose}>
-          <img src="/assets/icons/close.svg" alt="close" />
         </div>
       </div>
       <nav className={styles.nav}>
         {sidebarNavItems.itemsTop?.map((item, index) => (
           <NavLink
+            onClick={onClose}
             key={index}
             to={item.link}
             className={({ isActive }) =>
@@ -48,6 +51,7 @@ const Sidebar = ({ onClose }: SidebarProps) => {
           <div>
             {sidebarNavItems.itemsMid?.map((item, index) => (
               <NavLink
+                onClick={onClose}
                 key={index}
                 to={item.link}
                 className={({ isActive }) =>
@@ -64,6 +68,7 @@ const Sidebar = ({ onClose }: SidebarProps) => {
           <div className={styles.sidebarFooter}>
             {sidebarNavItems.itemsBottom?.map((item, index) => (
               <NavLink
+                onClick={onClose}
                 key={index}
                 to={item.link}
                 className={({ isActive }) =>
