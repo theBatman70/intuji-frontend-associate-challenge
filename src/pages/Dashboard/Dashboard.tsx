@@ -8,6 +8,7 @@ import Overview from "../../features/Overview/Overview";
 
 import "./Dashboard.module.scss";
 import styles from "./Dashboard.module.scss";
+import Analytics from "../../features/Analytics/Analytics";
 
 const Dashboard = () => {
   return (
@@ -15,6 +16,7 @@ const Dashboard = () => {
       <div className={styles.dashboardContainer}>
         <div className={styles.midBox}>
           <Overview />
+          <Analytics />
         </div>
         <Briefings>
           <BriefBox title="Saving Plan" viewMoreLink="#">

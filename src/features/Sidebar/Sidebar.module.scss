@@ -15,13 +15,10 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  max-width: 280px;
-  width: 100%;
-  // height: 100vh;
+  width: 280px;
   position: fixed;
   min-height: 100vh;
   background-color: $bg-white;
-  border-right: 1px solid $border-color;
   padding: $spacing-lg 0;
   transition: all 0.3s ease;
   font-size: $font-size-md;
@@ -29,18 +26,18 @@
 }
 
 .sidebarHeader {
-  padding: 0 $spacing-lg $spacing-lg;
+  padding: 0 $spacing-lg;
   margin-bottom: $spacing-lg;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  .logo {
+  .logoWrap {
     display: flex;
     align-items: center;
     justify-items: center;
-    gap: $spacing-sm;
-    background-color: lightgray;
+    background-color: #d9d9d9;
+    padding: 1.4rem 7.7rem;
 
     img {
       width: 32px;
@@ -64,6 +61,10 @@
     width: 100%;
     margin-bottom: $spacing-xs;
 
+    img {
+      filter: grayscale(100%);
+    }
+
     &:focus {
       outline: none;
     }
@@ -78,13 +79,17 @@
       background-color: rgba($primary-color, 0.05);
       font-weight: $font-weight-medium;
 
+      .buttonName,
+      img {
+        transform: translateX(3px);
+      }
+
       .buttonName {
         color: $text-dark;
       }
 
-      .buttonName,
       img {
-        transform: translateX(3px);
+        filter: grayscale(0%);
       }
     }
 
@@ -99,6 +104,10 @@
       .buttonName {
         font-weight: $font-weight-semibold;
         color: $text-dark;
+      }
+
+      img {
+        filter: grayscale(0%);
       }
     }
 

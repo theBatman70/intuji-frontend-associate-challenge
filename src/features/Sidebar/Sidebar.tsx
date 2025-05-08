@@ -20,7 +20,7 @@ const Sidebar = ({ onClose }: SidebarProps) => {
   return (
     <div className={styles.sidebar}>
       <div className={`${styles.sidebarHeader}`}>
-        <div className={styles.logo}>
+        <div className={styles.logoWrap}>
           <img src="/assets/icons/logo.svg" alt="Logo" />
         </div>
         <div className={styles.closeIcon} onClick={onClose}>

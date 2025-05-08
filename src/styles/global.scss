@@ -1,15 +1,11 @@
 @import "./utils/variables";
 
-body {
-  background-color: $bg-light;
-  line-height: 100%;
-  color: #667085;
-}
 img {
   max-width: 24px;
   max-height: 24px;
   object-fit: cover;
 }
+
 ul,
 ol {
   list-style: none;

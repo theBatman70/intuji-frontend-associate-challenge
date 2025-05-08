@@ -32,7 +32,7 @@ const OverviewCard = ({ overviewCard }: { overviewCard: OverviewCardType }) => {
           <h3>{title}</h3>
           <div className={styles.comparisionWrapper}>
             <img src={statusIconUrl} alt="export" />
-            <span>{percentage} compared with last month</span>
+            <span>{percentage} % compared with last month</span>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ const BriefBox: React.FC<{
     <section className={styles.briefBox}>
       <header className={styles.briefHeader}>
         <h2>{title}</h2>
-        <a href={viewMoreLink}>See all</a>
+        <a href={viewMoreLink}>See All</a>
       </header>
       <div className={styles.briefingList}>{children}</div>
     </section>
