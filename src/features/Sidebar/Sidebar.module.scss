@@ -2,16 +2,6 @@
 
 @import "../../styles/utils/variables";
 
-.closeIcon {
-  position: absolute;
-  top: -2px;
-  right: 0px;
-
-  @media (min-width: 1000px) {
-    display: none;
-  }
-}
-
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -30,123 +20,123 @@
   @media (max-width: 1000px) {
     display: none;
   }
-}
 
-.sidebarHeader {
-  padding: 0 $spacing-lg;
-  margin-bottom: $spacing-lg;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .logoWrap {
+  .sidebarHeader {
+    padding: 0 $spacing-lg;
+    margin-bottom: $spacing-lg;
     display: flex;
     align-items: center;
-    justify-items: center;
-    background-color: #d9d9d9;
-    padding: 1.4rem 7.7rem;
+    justify-content: center;
 
-    img {
-      width: 32px;
-      height: 32px;
-    }
-  }
-}
-
-.nav {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-
-  .navButton {
-    display: flex;
-    align-items: center;
-    padding: $spacing-lg $spacing-xxl;
-    color: $text-medium;
-    transition: all 0.3s ease;
-    border-left: 4px solid transparent;
-    width: 100%;
-    margin-bottom: $spacing-xs;
-
-    img {
-      filter: grayscale(100%);
-    }
-
-    &:focus {
-      outline: none;
-    }
-
-    .buttonName {
-      font-size: $font-size-md;
-      font-weight: $font-weight-regular;
-      color: $text-medium;
-    }
-
-    &:hover {
-      background-color: rgba($primary-color, 0.05);
-      font-weight: $font-weight-medium;
-
-      .buttonName,
-      img {
-        transform: translateX(3px);
-      }
-
-      .buttonName {
-        color: $text-dark;
-      }
-
-      img {
-        filter: grayscale(0%);
-      }
-    }
-
-    &.active {
-      border-left-color: $primary-color;
-
-      .buttonName,
-      img {
-        margin-left: 4px;
-      }
-
-      .buttonName {
-        font-weight: $font-weight-semibold;
-        color: $text-dark;
-      }
-
-      img {
-        filter: grayscale(0%);
-      }
-    }
-
-    img {
-      margin-right: $spacing-md;
+    .logoWrap {
       display: flex;
       align-items: center;
-      justify-content: center;
-      width: 24px;
-      height: 24px;
+      justify-items: center;
+      background-color: #d9d9d9;
+      padding: 1.4rem 7.7rem;
 
-      svg {
-        width: 20px;
-        height: 20px;
+      img {
+        width: 32px;
+        height: 32px;
       }
     }
   }
 
-  .sidebarDivider {
-    height: 1px;
-    background-color: $border-color;
-    margin: $spacing-lg $spacing-xl;
-  }
-
-  .bottomMenu {
+  .nav {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     flex-grow: 1;
 
-    .sidebarFooter {
-      margin-top: auto;
+    .navButton {
+      display: flex;
+      align-items: center;
+      padding: $spacing-lg $spacing-xxl;
+      color: $text-medium;
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+      width: 100%;
+      margin-bottom: $spacing-xs;
+
+      img {
+        filter: grayscale(100%);
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      .buttonName {
+        font-size: $font-size-md;
+        font-weight: $font-weight-regular;
+        color: $text-medium;
+      }
+
+      &:hover {
+        background-color: rgba($primary-color, 0.05);
+        font-weight: $font-weight-medium;
+
+        .buttonName,
+        img {
+          transform: translateX(3px);
+        }
+
+        .buttonName {
+          color: $text-dark;
+        }
+
+        img {
+          filter: grayscale(0%);
+        }
+      }
+
+      &.active {
+        border-left-color: $primary-color;
+
+        .buttonName,
+        img {
+          margin-left: 4px;
+        }
+
+        .buttonName {
+          font-weight: $font-weight-semibold;
+          color: $text-dark;
+        }
+
+        img {
+          filter: grayscale(0%);
+        }
+      }
+
+      img {
+        margin-right: $spacing-md;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .sidebarDivider {
+      height: 1px;
+      background-color: $border-color;
+      margin: $spacing-lg $spacing-xl;
+    }
+
+    .bottomMenu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+
+      .sidebarFooter {
+        margin-top: auto;
+      }
     }
   }
 }
